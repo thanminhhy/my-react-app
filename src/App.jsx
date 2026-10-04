@@ -19,6 +19,7 @@ function App(props) {
               <Sidebar />
             </div>
             <div className="col-sm-9">
+              {/* 5. bỏ props.children vào App.jsx để khi route access url nào thì ở app.jsx sẽ trả về component tương ứng */}
               {props.children}
               {/* <Content /> */}
             </div>

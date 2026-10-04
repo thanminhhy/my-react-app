@@ -15,6 +15,7 @@ import Login from "./components/Login.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    {/* 4. Sau khi tạo xong các components thì vào trang main.jsx(index.jsx) cấu hình route */}
     <BrowserRouter>
       <App>
         <Routes>
