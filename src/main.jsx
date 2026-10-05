@@ -12,6 +12,7 @@ import "./assets/css/responsive.css";
 import Home from "./components/Home.jsx";
 import Account from "./components/Account.jsx";
 import Login from "./components/Login.jsx";
+import Vdu1 from "./components/bai11/Vdu1.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Account />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/bai11_1" element={<Vdu1 />} />
         </Routes>
       </App>
     </BrowserRouter>
