@@ -19,6 +19,7 @@ import NumberList from "./components/bai12/NumberList.jsx";
 import ArrayMap from "./components/bai12/ArrayMap.jsx";
 import ObjectMap from "./components/bai12/ObjectMap.jsx";
 import A from "./components/bai31/A.jsx";
+import Test from "./components/bai13-forms/input-tag";
 
 const arr = ["iphone 1", "iphone 2", "iphone 3", "iphone 4"];
 const obj = {
@@ -41,6 +42,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="bai12_2" element={<ArrayMap arr={arr} />} />
           <Route path="bai12_3" element={<ObjectMap obj={obj} />} />
           <Route path="bai31" element={<A />} />
+          <Route path="controlled_components" element={<Test />} />
         </Routes>
       </App>
     </BrowserRouter>
