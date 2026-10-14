@@ -20,6 +20,7 @@ import ArrayMap from "./components/bai12/ArrayMap.jsx";
 import ObjectMap from "./components/bai12/ObjectMap.jsx";
 import A from "./components/bai31/A.jsx";
 import Test from "./components/bai13-forms/input-tag";
+import Textarea from "./components/bai13-forms/textarea-tag";
 
 const arr = ["iphone 1", "iphone 2", "iphone 3", "iphone 4"];
 const obj = {
@@ -43,6 +44,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="bai12_3" element={<ObjectMap obj={obj} />} />
           <Route path="bai31" element={<A />} />
           <Route path="controlled_components" element={<Test />} />
+          <Route path="bai13_textarea" element={<Textarea />} />
         </Routes>
       </App>
     </BrowserRouter>
