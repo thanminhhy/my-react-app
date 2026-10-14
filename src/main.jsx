@@ -14,6 +14,7 @@ import Account from "./components/Account.jsx";
 import Login from "./components/Login.jsx";
 import Vdu1 from "./components/bai11/Vdu1.jsx";
 import Vdu2 from "./components/bai11/Vdu2.jsx";
+import Vdu3 from "./components/bai11/Vdu3.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/login" element={<Login />} />
           <Route path="/bai11_1" element={<Vdu1 />} />
           <Route path="/bai11_2" element={<Vdu2 />} />
+          <Route path="bai11_3" element={<Vdu3 />} />
         </Routes>
       </App>
     </BrowserRouter>
