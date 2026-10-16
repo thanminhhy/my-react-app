@@ -22,6 +22,7 @@ import A from "./components/bai31/A.jsx";
 import Test from "./components/bai13-forms/input-tag";
 import Textarea from "./components/bai13-forms/textarea-tag";
 import Select from "./components/bai13-forms/select-tag";
+import Reservation from "./components/bai13-forms/HandleMultipleInput.jsx";
 
 const arr = ["iphone 1", "iphone 2", "iphone 3", "iphone 4"];
 const obj = {
@@ -47,6 +48,10 @@ createRoot(document.getElementById("root")).render(
           <Route path="controlled_components" element={<Test />} />
           <Route path="bai13_textarea" element={<Textarea />} />
           <Route path="bai13_select" element={<Select />} />
+          <Route
+            path="bai13_handle-multiple-inputs"
+            element={<Reservation />}
+          />
         </Routes>
       </App>
     </BrowserRouter>
