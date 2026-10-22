@@ -27,6 +27,7 @@ import TestLogin from "./components/bai15-16/login.jsx";
 import Demo from "./components/bai18-axios/Demo.jsx";
 import PostDemo from "./components/bai18-axios/PostDemo.jsx";
 import DeleteDemo from "./components/bai18-axios/baseUrl/DeleteDemo.jsx";
+import { UserProvider } from "./context/UserContext.jsx";
 
 const arr = ["iphone 1", "iphone 2", "iphone 3", "iphone 4"];
 const obj = {
@@ -37,31 +38,33 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* 4. Sau khi tạo xong các components thì vào trang main.jsx(index.jsx) cấu hình route */}
     <BrowserRouter>
-      <App>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/bai11_1" element={<Vdu1 />} />
-          <Route path="/bai11_2" element={<Vdu2 />} />
-          <Route path="bai11_3" element={<Vdu3 />} />
-          <Route path="bai12_1" element={<NumberList arr={arr} />} />
-          <Route path="bai12_2" element={<ArrayMap arr={arr} />} />
-          <Route path="bai12_3" element={<ObjectMap obj={obj} />} />
-          <Route path="bai31" element={<A />} />
-          <Route path="controlled_components" element={<Test />} />
-          <Route path="bai13_textarea" element={<Textarea />} />
-          <Route path="bai13_select" element={<Select />} />
-          <Route path="bai15_login" element={<TestLogin />} />
-          <Route path="bai18_axios" element={<Demo />} />
-          <Route
-            path="bai13_handle-multiple-inputs"
-            element={<Reservation />}
-          />
-          <Route path="bai18_post_axios" element={<PostDemo />} />
-          <Route path="bai18_delete_axios" element={<DeleteDemo />} />
-        </Routes>
-      </App>
+      <UserProvider>
+        <App>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/bai11_1" element={<Vdu1 />} />
+            <Route path="/bai11_2" element={<Vdu2 />} />
+            <Route path="bai11_3" element={<Vdu3 />} />
+            <Route path="bai12_1" element={<NumberList arr={arr} />} />
+            <Route path="bai12_2" element={<ArrayMap arr={arr} />} />
+            <Route path="bai12_3" element={<ObjectMap obj={obj} />} />
+            <Route path="bai31" element={<A />} />
+            <Route path="controlled_components" element={<Test />} />
+            <Route path="bai13_textarea" element={<Textarea />} />
+            <Route path="bai13_select" element={<Select />} />
+            <Route path="bai15_login" element={<TestLogin />} />
+            <Route path="bai18_axios" element={<Demo />} />
+            <Route
+              path="bai13_handle-multiple-inputs"
+              element={<Reservation />}
+            />
+            <Route path="bai18_post_axios" element={<PostDemo />} />
+            <Route path="bai18_delete_axios" element={<DeleteDemo />} />
+          </Routes>
+        </App>
+      </UserProvider>
     </BrowserRouter>
   </StrictMode>,
 );
