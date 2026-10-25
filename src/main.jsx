@@ -28,6 +28,7 @@ import Demo from "./components/bai18-axios/Demo.jsx";
 import PostDemo from "./components/bai18-axios/PostDemo.jsx";
 import DeleteDemo from "./components/bai18-axios/baseUrl/DeleteDemo.jsx";
 import { UserProvider } from "./context/UserContext.jsx";
+import Memo from "./components/hooks/memo.jsx";
 
 const arr = ["iphone 1", "iphone 2", "iphone 3", "iphone 4"];
 const obj = {
@@ -62,6 +63,7 @@ createRoot(document.getElementById("root")).render(
             />
             <Route path="bai18_post_axios" element={<PostDemo />} />
             <Route path="bai18_delete_axios" element={<DeleteDemo />} />
+            <Route path="memo_test" element={<Memo />} />
           </Routes>
         </App>
       </UserProvider>
