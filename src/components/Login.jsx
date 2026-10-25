@@ -1,30 +1,31 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import LogoutButton from "./button/LogoutButton";
 import LoginButton from "./button/LoginButton";
 
 //3. Tạo component Login
 function Login() {
-  const [isToggle, setIsToggle] = useState(false);
-
+  const [isLogin, setIsLogin] = useState(false);
+  const emailRef = useRef(); //Tạo ref
   function handleLogoutClick() {
-    setIsToggle(!isToggle);
+    setIsLogin(!isLogin);
   }
 
   function handleLoginClick() {
-    setIsToggle(!isToggle);
+    console.log(emailRef.current.value);
+    setIsLogin(!isLogin);
   }
   function renderButton() {
-    let button;
-    if (isToggle) {
-      button = <LogoutButton onClick={handleLogoutClick} />;
+    let form;
+    if (isLogin) {
+      form = <LogoutButton onClick={handleLogoutClick} />;
     } else {
-      button = <LoginButton onClick={handleLoginClick} />;
+      form = <LoginButton onClick={handleLoginClick} emailRef={emailRef} />;
     }
 
     //****Note: an element variable is simply a javascript variable that stores a react element
     //for example: button is a js variable that stores two react elements are <LogoutButton/> and <LoginButton/>
     //components will return react element such as <div>Login</div> or <button>Login</button>
-    return button;
+    return form;
   }
   return <div className="App">{renderButton()}</div>;
 }

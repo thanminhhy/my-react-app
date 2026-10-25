@@ -1,4 +1,10 @@
 function LoginButton(props) {
-  return <button onClick={props.onClick}>Login</button>;
+  const { emailRef } = props;
+  return (
+    <>
+      <input type="text" ref={emailRef} />
+      <button onClick={props.onClick}>Login</button>
+    </>
+  );
 }
 export default LoginButton;
